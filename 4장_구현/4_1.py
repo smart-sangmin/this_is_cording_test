@@ -1,9 +1,11 @@
 N = int(input())
+location = [0, 0]
+matrix = [[] * N for _ in range(N)]
+
 c = ('L', 'R', 'U', 'D')
 d = ((0, -1), (0, 1), (-1, 0), (1, 0))
-matrix = [[] * N for _ in range(N)]
+
 command = input().split()
-location = [0, 0]
 
 for cmd in command:
     x, y = location[0] + d[c.index(cmd)][0], location[1] + d[c.index(cmd)][1]
