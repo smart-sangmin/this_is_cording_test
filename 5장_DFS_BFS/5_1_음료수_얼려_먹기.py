@@ -28,10 +28,8 @@ def DFS(a, b):
     if a < 0 or b < 0 or a >= N or b >= M or ice[a][b] != 0:
         return
     ice[a][b] = -1
-    DFS(a - 1, b)
-    DFS(a + 1, b)
-    DFS(a, b - 1)
-    DFS(a, b + 1)
+    for x, y in ((a - 1, b), (a + 1, b), (a, b + 1), (a, b - 1)):
+        DFS(x, y)
 
 
 for i in range(N):
@@ -40,4 +38,3 @@ for i in range(N):
             DFS(i, j)
             cnt += 1
 print(cnt)
-print(ice)
