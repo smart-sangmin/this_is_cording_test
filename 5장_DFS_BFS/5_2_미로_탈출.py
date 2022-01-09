@@ -33,4 +33,3 @@ def bfs():
 
 
 print(bfs())
-print(MAP)
