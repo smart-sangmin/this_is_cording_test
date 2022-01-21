@@ -19,4 +19,5 @@ while start <= end:
         start = mid + 1
     elif total < M:
         end = mid - 1
+
 print(end)
